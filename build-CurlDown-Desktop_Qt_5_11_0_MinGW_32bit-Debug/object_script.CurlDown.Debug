@@ -1,0 +1,17 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\listwidget.o
+./debug\midwidget.o
+./debug\newtaskwidget.o
+./debug\unitwidget.o
+./debug\curldownmanager.o
+./debug\curldownelement.o
+./debug\mycurldown.o
+./debug\moc_mainwindow.o
+./debug\moc_listwidget.o
+./debug\moc_midwidget.o
+./debug\moc_newtaskwidget.o
+./debug\moc_unitwidget.o
+./debug\moc_curldownelement.o
+);

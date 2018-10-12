@@ -1,0 +1,17 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\listwidget.o
+./release\midwidget.o
+./release\newtaskwidget.o
+./release\unitwidget.o
+./release\curldownmanager.o
+./release\curldownelement.o
+./release\mycurldown.o
+./release\moc_mainwindow.o
+./release\moc_listwidget.o
+./release\moc_midwidget.o
+./release\moc_newtaskwidget.o
+./release\moc_unitwidget.o
+./release\moc_curldownelement.o
+);
