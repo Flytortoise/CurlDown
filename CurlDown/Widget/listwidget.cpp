@@ -48,6 +48,9 @@ void ListWidget::CloseUnit(UnitWidget *ptr)
 {
     CurlDownManager::GetCurDownManager()->EraseCurlDown(ptr);
 
+    if(ptr != nullptr)
+        qDebug() <<"ptr1";
+
     auto it = m_v.begin();
     while(it != m_v.end()){
         if(*it == ptr)
@@ -55,8 +58,15 @@ void ListWidget::CloseUnit(UnitWidget *ptr)
         ++it;
     }
 
-    m_v.erase(it);
+    if(ptr != nullptr)
+        qDebug() <<"ptr2";
+
+    if(it != m_v.end())
+        m_v.erase(it);
     delete ptr;
+    ptr = nullptr;
+    if(ptr != nullptr)
+        qDebug() <<"ptr3";
 
     WidgetUpdate();
 }
@@ -65,8 +75,8 @@ void ListWidget::ClearUnit()
 {
     CurlDownManager::GetCurDownManager()->ClearManager();
 
-    for(int i = 0; i < m_v.size(); i++)
-        delete m_v[i];
+//    for(int i = 0; i < m_v.size(); i++)
+//        delete m_v[i];
 
     m_v.clear();
     WidgetUpdate();

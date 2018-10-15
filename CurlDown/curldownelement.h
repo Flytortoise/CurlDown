@@ -23,12 +23,11 @@ public:
     void Stop();
     void OK();
     void Progress(double dltotal, double dlnow);
-    void SetSpeed(double speed);
 
 signals:
     void HasFinished();
     void OnProgress(double, double);
-    void OnSpeed(QString);
+    void OnSpeed(double);
 
 public slots:
     void Pause();

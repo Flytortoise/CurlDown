@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_UnitWidget_t {
-    QByteArrayData data[12];
-    char stringdata0[89];
+    QByteArrayData data[11];
+    char stringdata0[86];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -41,13 +41,12 @@ QT_MOC_LITERAL(6, 47, 2), // "OK"
 QT_MOC_LITERAL(7, 50, 10), // "OnProgress"
 QT_MOC_LITERAL(8, 61, 7), // "dltotal"
 QT_MOC_LITERAL(9, 69, 5), // "dlnow"
-QT_MOC_LITERAL(10, 75, 7), // "OnSpeed"
-QT_MOC_LITERAL(11, 83, 5) // "value"
+QT_MOC_LITERAL(10, 75, 10) // "TimeUpdate"
 
     },
     "UnitWidget\0Close\0\0UnitWidget*\0Pause\0"
     "CancelFunc\0OK\0OnProgress\0dltotal\0dlnow\0"
-    "OnSpeed\0value"
+    "TimeUpdate"
 };
 #undef QT_MOC_LITERAL
 
@@ -72,7 +71,7 @@ static const uint qt_meta_data_UnitWidget[] = {
        5,    0,   48,    2, 0x0a /* Public */,
        6,    0,   49,    2, 0x0a /* Public */,
        7,    2,   50,    2, 0x0a /* Public */,
-      10,    1,   55,    2, 0x0a /* Public */,
+      10,    0,   55,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    2,
@@ -82,7 +81,7 @@ static const uint qt_meta_data_UnitWidget[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Double, QMetaType::Double,    8,    9,
-    QMetaType::Void, QMetaType::QString,   11,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -98,7 +97,7 @@ void UnitWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 2: _t->CancelFunc(); break;
         case 3: _t->OK(); break;
         case 4: _t->OnProgress((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
-        case 5: _t->OnSpeed((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 5: _t->TimeUpdate(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

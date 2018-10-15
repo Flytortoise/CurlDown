@@ -42,39 +42,12 @@ void CurlDownElement::OK()
 
 void CurlDownElement::Pause()
 {
-    m_curldown->Pause();
+    if(m_curldown){         //暂停后 取消依然有bug
+        m_curldown->Pause();
+    }
 }
 
 void CurlDownElement::Progress(double dltotal, double dlnow)
 {
     emit OnProgress(dltotal, dlnow);
-}
-
-/*
- * 速度计算有问题
- */
-void CurlDownElement::SetSpeed(double speed)
-{
-    //qDebug() << speed;
-    speed /= 1024 * 1024 * 1024;
-    speed /= 1024;
-    QString unit = "B/s";
-    if(speed > 1024 * 1024 * 1024 ){
-        unit = "G/s";
-        speed /= 1024 * 1024 * 1024;
-    }
-    else if(speed > 1024 * 1024 ){
-        unit = "M/s";
-        speed /= 1024 * 1024 ;
-    }
-    else if(speed > 1024 ){
-        unit = "KB/s";
-        speed /= 1024;
-    }
-
-    char buff[10] = {0};
-    sprintf(buff, " %.2f %s",speed, unit.toStdString().c_str());
-
-    QString speedvalue(buff);
-    emit OnSpeed(speedvalue);
 }

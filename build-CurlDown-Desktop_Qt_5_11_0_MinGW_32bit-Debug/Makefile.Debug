@@ -282,6 +282,9 @@ debug/moc_mainwindow.cpp: C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QMainWindow 
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qscrollarea.h \
 		../CurlDown/Widget/unitwidget.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		../CurlDown/mainwindow.h \
 		debug/moc_predefs.h \
 		C:/Qt/5.11.0/mingw53_32/bin/moc.exe
@@ -407,6 +410,9 @@ debug/moc_listwidget.cpp: C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		../CurlDown/Widget/listwidget.h \
 		debug/moc_predefs.h \
 		C:/Qt/5.11.0/mingw53_32/bin/moc.exe
@@ -549,6 +555,9 @@ debug/moc_midwidget.cpp: C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qscrollarea.h \
 		../CurlDown/Widget/unitwidget.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		../CurlDown/Widget/midwidget.h \
 		debug/moc_predefs.h \
 		C:/Qt/5.11.0/mingw53_32/bin/moc.exe
@@ -789,6 +798,9 @@ debug/moc_unitwidget.cpp: C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QWidget \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		../CurlDown/Widget/unitwidget.h \
 		debug/moc_predefs.h \
 		C:/Qt/5.11.0/mingw53_32/bin/moc.exe
@@ -905,13 +917,15 @@ debug/moc_curldownelement.cpp: ../CurlDown/Widget/unitwidget.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QThread \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/qthread.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QMutexLocker \
 		../CurlDown/curl/curl.h \
 		../CurlDown/curl/curlver.h \
-		../CurlDown/curl/curlbuild.h \
-		../CurlDown/curl/curlrules.h \
+		../CurlDown/curl/system.h \
 		../CurlDown/curl/easy.h \
 		../CurlDown/curl/multi.h \
 		../CurlDown/curl/typecheck-gcc.h \
@@ -1082,6 +1096,9 @@ debug/main.o: ../CurlDown/main.cpp ../CurlDown/mainwindow.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qscrollarea.h \
 		../CurlDown/Widget/unitwidget.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QApplication \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/qcoreapplication.h \
@@ -1233,6 +1250,9 @@ debug/mainwindow.o: ../CurlDown/mainwindow.cpp ../CurlDown/mainwindow.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qscrollarea.h \
 		../CurlDown/Widget/unitwidget.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QHBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\CurlDown\mainwindow.cpp
 
@@ -1357,6 +1377,9 @@ debug/listwidget.o: ../CurlDown/Widget/listwidget.cpp ../CurlDown/Widget/listwid
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/QPalette \
 		../CurlDown/curldownmanager.h \
 		../CurlDown/curldownelement.h \
@@ -1365,8 +1388,7 @@ debug/listwidget.o: ../CurlDown/Widget/listwidget.cpp ../CurlDown/Widget/listwid
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QMutexLocker \
 		../CurlDown/curl/curl.h \
 		../CurlDown/curl/curlver.h \
-		../CurlDown/curl/curlbuild.h \
-		../CurlDown/curl/curlrules.h \
+		../CurlDown/curl/system.h \
 		../CurlDown/curl/easy.h \
 		../CurlDown/curl/multi.h \
 		../CurlDown/curl/typecheck-gcc.h \
@@ -1512,6 +1534,9 @@ debug/midwidget.o: ../CurlDown/Widget/midwidget.cpp ../CurlDown/Widget/midwidget
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qscrollarea.h \
 		../CurlDown/Widget/unitwidget.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QHBoxLayout
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\midwidget.o ..\CurlDown\Widget\midwidget.cpp
 
@@ -1760,6 +1785,9 @@ debug/unitwidget.o: ../CurlDown/Widget/unitwidget.cpp ../CurlDown/Widget/unitwid
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/QHBoxLayout \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qlayout.h \
@@ -1776,8 +1804,7 @@ debug/unitwidget.o: ../CurlDown/Widget/unitwidget.cpp ../CurlDown/Widget/unitwid
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QMutexLocker \
 		../CurlDown/curl/curl.h \
 		../CurlDown/curl/curlver.h \
-		../CurlDown/curl/curlbuild.h \
-		../CurlDown/curl/curlrules.h \
+		../CurlDown/curl/system.h \
 		../CurlDown/curl/easy.h \
 		../CurlDown/curl/multi.h \
 		../CurlDown/curl/typecheck-gcc.h \
@@ -1897,14 +1924,16 @@ debug/curldownmanager.o: ../CurlDown/curldownmanager.cpp ../CurlDown/curldownman
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		../CurlDown/curldownelement.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QThread \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/qthread.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QMutexLocker \
 		../CurlDown/curl/curl.h \
 		../CurlDown/curl/curlver.h \
-		../CurlDown/curl/curlbuild.h \
-		../CurlDown/curl/curlrules.h \
+		../CurlDown/curl/system.h \
 		../CurlDown/curl/easy.h \
 		../CurlDown/curl/multi.h \
 		../CurlDown/curl/typecheck-gcc.h \
@@ -2024,13 +2053,15 @@ debug/curldownelement.o: ../CurlDown/curldownelement.cpp ../CurlDown/curldownele
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QDebug \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QThread \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/qthread.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QMutexLocker \
 		../CurlDown/curl/curl.h \
 		../CurlDown/curl/curlver.h \
-		../CurlDown/curl/curlbuild.h \
-		../CurlDown/curl/curlrules.h \
+		../CurlDown/curl/system.h \
 		../CurlDown/curl/easy.h \
 		../CurlDown/curl/multi.h \
 		../CurlDown/curl/typecheck-gcc.h \
@@ -2041,8 +2072,7 @@ debug/curldownelement.o: ../CurlDown/curldownelement.cpp ../CurlDown/curldownele
 debug/mycurldown.o: ../CurlDown/mycurldown.cpp ../CurlDown/mycurldown.h \
 		../CurlDown/curl/curl.h \
 		../CurlDown/curl/curlver.h \
-		../CurlDown/curl/curlbuild.h \
-		../CurlDown/curl/curlrules.h \
+		../CurlDown/curl/system.h \
 		../CurlDown/curl/easy.h \
 		../CurlDown/curl/multi.h \
 		../CurlDown/curl/typecheck-gcc.h \
@@ -2159,6 +2189,9 @@ debug/mycurldown.o: ../CurlDown/mycurldown.cpp ../CurlDown/mycurldown.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qpushbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtGui/qicon.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/QTimer \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qtimer.h \
+		C:/Qt/5.11.0/mingw53_32/include/QtCore/qbasictimer.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QThread \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/qthread.h \
 		C:/Qt/5.11.0/mingw53_32/include/QtCore/QMutexLocker

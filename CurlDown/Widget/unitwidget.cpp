@@ -17,18 +17,25 @@ UnitWidget::UnitWidget(QWidget *parent) : QWidget (parent)
 void UnitWidget::CreateInit()
 {
     m_FileNameLabel = new QLabel(tr("FileName"));
-    m_SpeedLabel = new QLabel(tr(""));
-    m_ProgressBarLabel = new QLabel(tr(""));
+    m_SpeedLabel = new QLabel(tr(" 0 KB/s"));
+    m_ProgressBarLabel = new QLabel(tr(" 0.0 %"));
+    m_timer = new QTimer(this);
+    connect(m_timer, SIGNAL(timeout()), this, SLOT(TimeUpdate()));
+    m_nowSize = 0;
+    m_frontSize = 0;
+    m_timer->start(1000);
 
     m_PauseButton = new QPushButton(tr("暂停"));
     connect(m_PauseButton, &QPushButton::clicked, this,[&](){
         static int UnitFlag = 0;
         if(UnitFlag == 0){
             m_PauseButton->setText(tr("继续"));
+            m_timer->stop();
             UnitFlag = 1;
         }
         else{
             m_PauseButton->setText(tr("暂停"));
+            m_timer->start(1000);
             UnitFlag = 0;
         }
 
@@ -60,13 +67,16 @@ void UnitWidget::CreateLayout()
 void UnitWidget::CancelFunc()
 {
     //this->close();
+    m_timer->stop();
     emit Close(this);
 }
 
 void UnitWidget::OK()
 {
+    m_timer->stop();
     m_PauseButton->setEnabled(false);
 }
+
 
 void UnitWidget::OnProgress(double dltotal, double dlnow)
 {
@@ -79,9 +89,33 @@ void UnitWidget::OnProgress(double dltotal, double dlnow)
 
     QString value(buff);
     m_ProgressBarLabel->setText(value);
+    m_nowSize = dlnow;
 }
 
-void UnitWidget::OnSpeed(QString value)
+void UnitWidget::TimeUpdate()
 {
-    //m_SpeedLabel->setText(value);
+    double speed = m_nowSize - m_frontSize;
+
+    QString unit = "B/s";
+    if(speed > 1024 * 1024 * 1024 ){
+        unit = "G/s";
+        speed /= 1024 * 1024 * 1024;
+    }
+    else if(speed > 1024 * 1024 ){
+        unit = "M/s";
+        speed /= 1024 * 1024 ;
+    }
+    else if(speed > 1024 ){
+        unit = "KB/s";
+        speed /= 1024;
+    }
+
+    char buff[10] = {0};
+    sprintf(buff, " %.1f %s",speed, unit.toStdString().c_str());
+
+    QString value(buff);
+
+    m_SpeedLabel->setText(value);
+
+    m_frontSize = m_nowSize;
 }

@@ -68,7 +68,7 @@ static const uint qt_meta_data_CurlDownElement[] = {
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void, QMetaType::Double, QMetaType::Double,    2,    2,
-    QMetaType::Void, QMetaType::QString,    2,
+    QMetaType::Void, QMetaType::Double,    2,
 
  // slots: parameters
     QMetaType::Void,
@@ -84,7 +84,7 @@ void CurlDownElement::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         switch (_id) {
         case 0: _t->HasFinished(); break;
         case 1: _t->OnProgress((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2]))); break;
-        case 2: _t->OnSpeed((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 2: _t->OnSpeed((*reinterpret_cast< double(*)>(_a[1]))); break;
         case 3: _t->Pause(); break;
         default: ;
         }
@@ -105,7 +105,7 @@ void CurlDownElement::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
             }
         }
         {
-            using _t = void (CurlDownElement::*)(QString );
+            using _t = void (CurlDownElement::*)(double );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&CurlDownElement::OnSpeed)) {
                 *result = 2;
                 return;
@@ -164,7 +164,7 @@ void CurlDownElement::OnProgress(double _t1, double _t2)
 }
 
 // SIGNAL 2
-void CurlDownElement::OnSpeed(QString _t1)
+void CurlDownElement::OnSpeed(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);

@@ -3,6 +3,7 @@
 
 #include "curl/curl.h"
 #include <QString>
+#include <mutex>
 //#include "CurlDownElement.h"
 
 class CurlDownElement;
@@ -15,6 +16,7 @@ public:
         RUN,
         PAUSE,
     };
+
 
     CurlDown(CurlDownElement *curl);
     ~CurlDown();
@@ -38,6 +40,7 @@ private:
     int m_runflag;
     long long m_pos;
 
+    std::mutex m_mutex;
 };
 
 #endif // CURLDOWN_H

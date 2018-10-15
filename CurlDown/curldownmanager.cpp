@@ -55,7 +55,6 @@ void CurlDownManager::AddCurlDown(UnitWidget *u)
     QObject::connect(m_map[u], SIGNAL(finished()), m_map[u], SLOT(deleteLater()));  //线程结束之后自动销毁
     QObject::connect(m_map[u], SIGNAL(HasFinished()), u, SLOT(OK()));
     QObject::connect(m_map[u], SIGNAL(OnProgress(double,double)), u, SLOT(OnProgress(double, double)));
-    QObject::connect(m_map[u], SIGNAL(OnSpeed(QString)), u, SLOT(OnSpeed(QString)));
     QObject::connect(u, SIGNAL(Pause()), m_map[u], SLOT(Pause()));
 
 
@@ -66,10 +65,23 @@ void CurlDownManager::EraseCurlDown(UnitWidget *u)
 {
     std::unique_lock<std::mutex> lock(m_map_mutex);
     if(m_map.count(u)){
+        qDebug() << "curldownmanager1";
         m_map[u]->Stop();       //关闭存在问题
+        qDebug() << "curldownmanager2";
+
+        m_map[u]->quit();
+        qDebug() << "curldownmanager3";
+
+        m_map[u]->wait();
+        qDebug() << "curldownmanager4";
+
         m_map[u]->exit();
-        delete m_map[u];
+        qDebug() << "curldownmanager5";
+
+        //delete m_map[u];
         m_map.erase(u);
+        qDebug() << "curldownmanager6";
+
     }
 }
 

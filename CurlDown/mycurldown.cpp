@@ -59,6 +59,7 @@ bool CurlDown::SetResumeFormLarge(long long pos)
 
 void CurlDown::Pause()
 {
+    std::unique_lock<std::mutex> locker(m_mutex);
     if(m_runflag == RUN){
         curl_easy_pause(m_curl,CURLPAUSE_ALL);
         m_runflag = PAUSE;
@@ -71,6 +72,7 @@ void CurlDown::Pause()
 
 void CurlDown::Stop()
 {
+    std::unique_lock<std::mutex> locker(m_mutex);
     if(m_runflag == STOP)
         return;
 
@@ -100,13 +102,13 @@ bool CurlDown::DownFile(QString FileName, QString URL)
 {
     this->SetFileName(FileName);
 
-
     CURLcode res = CURLE_GOT_NOTHING;
     const char *u = URL.toStdString().c_str();
     curl_easy_setopt(m_curl, CURLOPT_URL, u);
-    curl_easy_setopt(m_curl, CURLOPT_NOPROGRESS, 0);
+
     curl_easy_setopt(m_curl, CURLOPT_PROGRESSFUNCTION, ProgressCallback);
     curl_easy_setopt(m_curl, CURLOPT_PROGRESSDATA, this);
+    curl_easy_setopt(m_curl, CURLOPT_NOPROGRESS, 0);
 
     m_runflag = RUN;
     res = curl_easy_perform(m_curl);
@@ -122,9 +124,14 @@ bool CurlDown::DownFile(QString FileName, QString URL)
 size_t CurlDown::wirtefunc(void *ptr, size_t size, size_t nmemb, void *stream)
 {
     CurlDown *p = reinterpret_cast<CurlDown*>(stream);
+
+    //std::unique_lock<std::mutex> locker(p->m_mutex);
+
     if(p->m_runflag == RUN){
+
         return fwrite(ptr, size, nmemb, p->m_File);
     }
+
 
     return 0;
 }
@@ -132,23 +139,18 @@ size_t CurlDown::wirtefunc(void *ptr, size_t size, size_t nmemb, void *stream)
 int CurlDown::ProgressCallback(void *stream, double dltotal, double dlnow, double ultotal, double ulnow)
 {
     CurlDown* p = reinterpret_cast<CurlDown*>(stream);
+    //std::unique_lock<std::mutex> locker(p->m_mutex);
 
     if ( p->m_runflag == RUN )
     {
+
         if(dlnow < p->m_pos)
             dlnow = dlnow + p->m_pos;
         p->m_curldownelement->Progress(dltotal, dlnow);
-
-       // curl_off_t speed;
-       // curl_easy_getinfo(p->m_curl,CURLINFO_SPEED_DOWNLOAD, &speed);
-       // p->m_curldownelement->SetSpeed(speed);
-
     }
     return 0;
 
 }
-
-
 
 
 

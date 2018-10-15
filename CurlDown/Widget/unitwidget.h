@@ -7,6 +7,7 @@
 
 #include <QPushButton>
 #include <QDebug>
+#include <QTimer>
 
 struct DownInformation{
     QString DownPath;
@@ -41,7 +42,8 @@ public slots:
     void CancelFunc();
     void OK();
     void OnProgress(double dltotal, double dlnow);
-    void OnSpeed(QString value);
+
+    void TimeUpdate();
 
 private:
     void CreateInit();
@@ -55,9 +57,11 @@ private:
     QPushButton *m_OpenFolderButton;
     QPushButton *m_CancelButton;
 
+    QTimer *m_timer;
+
     DownInformation m_information;
-
-
+    double m_nowSize;
+    double m_frontSize;
 };
 
 #endif // UNITWIDGET_H
